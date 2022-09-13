@@ -1,5 +1,4 @@
 // declare and get element from index.html
-
 let personPlay = 0;
 let challengeQuestion = 0;
 // Giving countable section animation

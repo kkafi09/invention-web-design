@@ -1,5 +1,4 @@
 // Create Looping Element
-
 const list = document.getElementById("questionList");
 const childlist = document.getElementById("questionContainer");
 const grandchildlist = document.getElementById("questionContentWrapper");
@@ -65,33 +64,65 @@ for (let length = 0; length < getChildText.length; length++) {
 // Level Event Listener
 const levelButton = document.querySelectorAll(".levelNav");
 const colorMarker = document.querySelectorAll(".colorMarker");
-let color = [];
-let navigationChanging = [];
-let clicked = false;
-const arrtrue = [false, false, false];
-console.log(clicked);
-levelButton.forEach((element, index) => {
-  clicked = true;
-  color.push(element.value);
+let color = null;
+levelButton.forEach((element) => {
   element.addEventListener("click", () => {
-    console.log(arrtrue);
-    arrtrue[index] = true;
-    console.log(arrtrue);
-    const toTrue = element.setAttribute("name", "true");
-    const getAttribute = element.getAttribute("name");
-    if (getAttribute) {
-      if (arrtrue[index]) {
-        levelButton.forEach((value) => {
-          if (!value.name) {
-            value.classList.remove(`text-${value.value}`, "font-bold");
-          } else {
-            element.classList.add(`text-${element.value}`, "font-bold");
-            colorMarker.forEach((child) => {
-              child.classList.toggle(`bg-${element.value}`);
-            });
-          }
-        });
-      }
-    }
+    window.location.assign(window.location.pathname + "#" + element.value);
+    location.reload();
   });
+  const pathContain = window.location.hash;
+  const replaceHash = pathContain.replace("#", "");
+  colorMarker.forEach((child) => {
+    child.classList.toggle(`bg-${replaceHash}`);
+  });
+  if (pathContain.includes("greenEasy")) {
+    document.querySelector(".questionContainer").classList.remove("hidden");
+    document.getElementsByName("easy")[0].classList.add(`text-${replaceHash}`, "font-bold");
+    document.getElementsByName("medium")[0].classList.remove(`text-orangeMedium`, "font-bold");
+    document.getElementsByName("hard")[0].classList.remove(`text-pinkHard`, "font-bold");
+  } else if (pathContain.includes("orangeMedium")) {
+    document.querySelector(".questionContainer").classList.remove("hidden");
+    document.getElementsByName("easy")[0].classList.remove(`text-greenEasy`, "font-bold");
+    document.getElementsByName("medium")[0].classList.add(`text-${replaceHash}`, "font-bold");
+    document.getElementsByName("hard")[0].classList.remove(`text-pinkHard`, "font-bold");
+  } else if (pathContain.includes("pinkHard")) {
+    document.querySelector(".questionContainer").classList.remove("hidden");
+    document.getElementsByName("easy")[0].classList.remove(`text-greenEasy`, "font-bold");
+    document.getElementsByName("medium")[0].classList.remove(`text-OrangeMedium`, "font-bold");
+    document.getElementsByName("hard")[0].classList.add(`text-${replaceHash}`, "font-bold");
+  }
 });
+
+// let color = [];
+// let navigationChanging = [];
+// let clicked = false;
+// const arrtrue = [false, false, false];
+// console.log(clicked);
+// levelButton.forEach((element, index) => {
+//   clicked = true;
+//   color.push(element.value);
+//   element.addEventListener("click", () => {
+//     console.log(arrtrue);
+//     arrtrue[index] = true;
+//     console.log(arrtrue);
+//     const toTrue = element.setAttribute("name", "true");
+//     const getAttribute = element.getAttribute("name");
+//     if (getAttribute) {
+//       if (arrtrue[index]) {
+//         levelButton.forEach((value) => {
+//           if (!value.name) {
+//             value.classList.remove(`text-${value.value}`, "font-bold");
+//           } else {
+//             element.classList.add(`text-${element.value}`, "font-bold");
+//             colorMarker.forEach((child) => {
+//               child.classList.toggle(`bg-${element.value}`);
+//             });
+//           }
+//         });
+//       }
+//     }
+//   });
+// });
+handleQuestion = () => {
+  Swal.fire("The Internet?", "That thing is still around?", "question");
+};

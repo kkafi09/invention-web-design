@@ -34,8 +34,8 @@
               </div>
             </div>
 
-            <div class="hidden lg:flex flex-col md:flex-row justify-end w-full">
-              <div class="flex flex-col items-center lg:flex-row w-full divide-x-2 divide-black lg:w-2/4">
+            <div class="hidden lg:flex flex-col md:flex-row justify-center w-full">
+              <div class="flex flex-col items-center lg:flex-row divide-x-2 divide-black w-full justify-end">
                 <a href="#" class="block px-4">Any Question?</a>
                 <a href="#" class="block px-4">English <i class="fa-solid fa-caret-down"></i></a>
                 <a href="./signin.html" id="signInButton" class="block px-4">Sign In</a>
@@ -56,7 +56,7 @@
             <div class="questionList w-full flex flex-col gap-y-6" id="questionList">
               <div class="wrapper bg-white p-9 rounded-2xl">
                 <a href="./textEditor.html">
-                  <div class="questionContainer flex flex-col gap-y-6 overflow-y-scroll p-2 w-full max-h-96 h-96" id="questionContainer">
+                  <div class="questionContainer hidden flex flex-col gap-y-6 overflow-y-scroll p-2 w-full max-h-96 h-96" id="questionContainer">
                     <div class="question content flex flex-row gap-x-4 w-full h-16 rounded-xl bg-semigrey" id="questionContentWrapper">
                       <div class="colorMarker flex justify-center items-center w-1/6 rounded-xl" id="colorMarker">
                         <div class="ring-white ring-4 rounded-full h-6 w-6" id="ring"></div>
@@ -70,9 +70,9 @@
               </div>
               <div class="levelContaier h-fit bg-white w-full rounded-2xl">
                 <div class="navigation flex flex-row py-3 divide-x-2 text-xl divide-black font-medium">
-                  <button value="greenEasy" class="levelNav w-full easy" name="false" id="levelNav">Easy</button>
-                  <button value="orangeMedium" class="levelNav w-full medium" name="false" id="levelNav">Medium</button>
-                  <button value="pinkHard" class="levelNav w-full hard" name="false" id="questionNav">Hard</button>
+                  <button value="greenEasy" class="levelNav w-full easy" name="easy" id="levelNav">Easy</button>
+                  <button value="orangeMedium" class="levelNav w-full medium" name="medium" id="levelNav">Medium</button>
+                  <button value="pinkHard" class="levelNav w-full hard" name="hard" id="questionNav">Hard</button>
                 </div>
               </div>
             </div>
