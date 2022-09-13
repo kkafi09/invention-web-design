@@ -59,62 +59,31 @@
                 <option value="bg">Background</option>
               </select>
             </div>
-            <div class="checkPalindrome">
-              <select name="cp" id="fs" class="py-2 px-4 rounded-xl">
-                <option value="cp">Check Palindrome</option>
-              </select>
-            </div>
           </div>
           <div class="question-output-problem-textEditor h-fit flex flex-row mt-8 gap-x-8">
-            <div class="question_output flex flex-col w-full h-full gap-y-8">
-              <div class="wrapper-question">
-                <div class="content bg-white p-6 rounded-xl">
-                  <div class="content flex flex-col gap-y-4">
-                    <div class="topBar flex flex-row">
-                      <button class="text-lg font-semibold">Check Palindrome</button>
-                      <button class="text-pinkHard font-semibold">Reset</button>
-                    </div>
-                    <p>Write a function that takes a non-empty string and which returns <span class="text-orangeMedium font-medium underline"> booleans </span> indicating whether the string is a palindrome.</p>
-                    <p>A palindrome is defined as a string that is written the same forward and backward. Note that single character strings are palindromes.</p>
-                    <div class="expectedInput">
-                      <div class="wrapper">
-                        <div class="expectedInput content flex flex-row gap-x-4 w-full h-12 rounded-xl bg-semigrey" id="expectedInputContentWrapper">
-                          <div class="colorMarker flex justify-center items-center w-1/6 rounded-xl bg-greenEasy" id="colorMarker">
-                            <div class="ring-white ring-4 rounded-full h-5 w-5" id="ring"></div>
-                          </div>
-                          <div class="expectedInputlist flex items-center" id="questParent">
-                            <div class="expectedInput font-medium text-md" id="questChild">const string = "abcdabcd";</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            <div class="textEditorSection w-full h-full">
+              <div class="wrapperIDE font-medium">
+                <div class="topbar flex flex-row justify-between">
+                  <button class="bg-white rounded-t-md px-4 py-2">Playground</button>
+                  <button class="bg-greenEasy text-white w-24 rounded-md h-fit py-1">Run</button>
+                </div>
+                <div class="content">
+                  <textarea name="" id="" cols="30" rows="10" class="w-full h-[25.5rem] rounded-xl rounded-tl-none p-4"></textarea>
                 </div>
               </div>
+            </div>
+            <div class="question_output flex flex-col w-2/3 h-full gap-y-8">
               <div class="wrapper-information">
                 <div class="topBar">
                   <div class="wrapperTopBar font-medium flex justify-between flex-row">
                     <div class="infoButton">
                       <button class="bg-white w-24 rounded-t-md px-4 py-2">Output</button>
-                      <button class="bg-grey text-white w-24 rounded-t-md px-4 py-2">Log</button>
-                      <button class="bg-grey text-white w-24 rounded-t-md px-4 py-2">Problem</button>
                     </div>
                     <div class="buttonSend">
                       <button class="bg-greenEasy text-white w-24 rounded-md py-1">Send</button>
                     </div>
                   </div>
-                  <div class="errContent bg-white h-28 rounded-tl-none rounded-xl p-4">Your output will shown here</div>
-                </div>
-              </div>
-            </div>
-            <div class="textEditorSection w-full h-full">
-              <div class="wrapperIDE font-medium">
-                <div class="topbar flex flex-row justify-between">
-                  <button class="bg-white w-24 rounded-t-md px-4 py-2">Solution</button>
-                  <button class="bg-greenEasy text-white w-24 rounded-md h-fit py-1">Run</button>
-                </div>
-                <div class="content">
-                  <textarea name="" id="" cols="30" rows="10" class="w-full h-[25.5rem] rounded-xl rounded-tl-none p-4"></textarea>
+                  <div class="errContent bg-white h-[25.5rem] rounded-tl-none rounded-xl p-4">Your output will shown here</div>
                 </div>
               </div>
             </div>
@@ -124,10 +93,10 @@
       <footer class="footer wrapper">
         <div class="footer-content bg-white absolute bottom-0 right-0 left-0 h-20 flex content-center font-medium">
           <div class="content 2 navigationPlayground h-full w-full flex justify-center">
-            <a href="./questions.html" class="block px-4 py-2 mt-5 bg-black text-white rounded-full my-auto w-2/3 text-center">Questions Challenge</a>
+            <a href="./questions.html" class="block px-4 py-2 mt-5 rounded-full my-auto w-2/3 text-center">Questions Challenge</a>
           </div>
           <div class="content 3 navigationPlayground h-full w-full flex justify-center">
-            <a href="./playground.html" class="block px-4 py-2 mt-5 rounded-full my-auto w-2/3 text-center">Playground</a>
+            <a href="./playground.html" class="block px-4 py-2 mt-5 bg-black text-white rounded-full my-auto w-2/3 text-center">Playground</a>
           </div>
           <div class="content 4 navigationLeaderboard h-full w-full flex justify-center">
             <a href="./leaderboard.html" class="block px-4 py-2 mt-5 rounded-full my-auto w-2/3 text-center">Leaderboard</a>

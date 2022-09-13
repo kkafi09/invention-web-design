@@ -59,39 +59,40 @@ for (m; m < i; m++) {
 }
 const getChildText = document.getElementsByClassName("childtext$");
 for (let length = 0; length < getChildText.length; length++) {
-  getChildText[length].innerHTML = `Question ${length + 2} #Easy`;
+  getChildText[length].innerHTML = `Full Name #${length + 2}`;
 }
 
 // Level Event Listener
 const levelButton = document.querySelectorAll(".levelNav");
-const colorMarker = document.querySelectorAll(".colorMarker");
+const selectQuestion = document.querySelectorAll(".colorMarker");
+
 let color = [];
 let navigationChanging = [];
-let clicked = false;
-const arrtrue = [false, false, false];
-console.log(clicked);
-levelButton.forEach((element, index) => {
-  clicked = true;
+levelButton.forEach((element) => {
   color.push(element.value);
-  element.addEventListener("click", () => {
-    console.log(arrtrue);
-    arrtrue[index] = true;
-    console.log(arrtrue);
-    const toTrue = element.setAttribute("name", "true");
-    const getAttribute = element.getAttribute("name");
-    if (getAttribute) {
-      if (arrtrue[index]) {
-        levelButton.forEach((value) => {
-          if (!value.name) {
-            value.classList.remove(`text-${value.value}`, "font-bold");
-          } else {
-            element.classList.add(`text-${element.value}`, "font-bold");
-            colorMarker.forEach((child) => {
-              child.classList.toggle(`bg-${element.value}`);
-            });
-          }
-        });
-      }
+});
+levelButton.forEach((e, i) => {
+  navigationChanging.push(e);
+  const checker = e.classList.contains(`text-${color[i]}`);
+  e.addEventListener("click", () => {
+    if (!checker) {
+      e.classList.add(`text-${color[i]}`, "font-bold");
+      navigationChanging.splice(i, 1);
+      console.log(navigationChanging);
+      navigationChanging.forEach((element, index) => {
+        // element.classList.remove(`text-${color[index]}`, "font-bold");
+        navigationChanging.splice(i, element);
+        console.log(element);
+        console.log(navigationChanging);
+        if (navigationChanging[index].classList.contains(`text-${color[index]}`)) {
+          e.classList.remove(`text-${color[i]}`, "font-bold");
+        }
+      });
     }
   });
+});
+
+const number = document.querySelectorAll(".grandchildelement99");
+number.forEach((element, index) => {
+  element.innerHTML = `${index + 2}`;
 });
