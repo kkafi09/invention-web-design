@@ -3,14 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "npx tailwindcss -i ./src/css/input.css -o ./dist/output.css --watch"
+    "dev": "npx tailwindcss -i ./src/css/input.css -o ./dist/output.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.1.8"
+  },
+  "dependencies": {
+    "require": "^2.4.20"
   }
 }

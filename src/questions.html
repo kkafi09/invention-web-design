@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INVENTION WEB DESIGN</title>
+    <!-- Import font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- import tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="../dist/output.css" rel="stylesheet" />
+    <link href="../src/css/input.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="top-bar relative border-b lg:border-b-0 py-2">
+        <div class="max-w-8xl absolute top-0 left-0 right-0 mx-auto w-auto">
+          <div class="flex flex-col lg:flex-row box-border h-20 py-5">
+            <div class="flex items-center justify-between px-20 lg:py-0">
+              <div>
+                <a href="./index.html" class="font-bold text-2xl">Mlengsoy</a>
+              </div>
+              <div>
+                <a class="focus:outline-none text-white block lg:hidden">
+                  <i class="fa-solid fa-bars text-black text-2xl"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="hidden lg:flex flex-col md:flex-row justify-center w-full">
+              <div class="flex flex-col items-center lg:flex-row divide-x-2 divide-black w-full justify-end">
+                <a href="#" class="block px-4">Any Question?</a>
+                <a href="#" class="block px-4">English <i class="fa-solid fa-caret-down"></i></a>
+                <a href="./signin.html" id="signInButton" class="block px-4">Sign In</a>
+                <a href="./login.html" class="block px-4 py-2 mx-4 bg-black text-white rounded-full my-auto w-full lg:w-1/3 text-center">Sign Up</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-cream -mt-4 pb-6 h-screen">
+        <div class="max-w-8xl flex items-center h-full mx-auto w-11/12">
+          <div class="w-full flex items-center justify-between">
+            <div class="text w-full px-5">
+              <h1 class="text-5xl font-semibold leading-normal">Take it easy for the task.</h1>
+              <img src="./img/questionGraphic.svg" alt="Gambar foto" />
+            </div>
+            <div class="questionList w-full flex flex-col gap-y-6" id="questionList">
+              <div class="wrapper bg-white p-9 rounded-2xl">
+                <a href="./textEditor.html">
+                  <div class="questionContainer hidden flex flex-col gap-y-6 overflow-y-scroll p-2 w-full max-h-96 h-96" id="questionContainer">
+                    <div class="question content flex flex-row gap-x-4 w-full h-16 rounded-xl bg-semigrey" id="questionContentWrapper">
+                      <div class="colorMarker flex justify-center items-center w-1/6 rounded-xl" id="colorMarker">
+                        <div class="ring-white ring-4 rounded-full h-6 w-6" id="ring"></div>
+                      </div>
+                      <div class="questionlist py-3 flex items-center" id="questParent">
+                        <div class="question font-medium text-lg" id="questChild">Question 1 #Easy</div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="levelContaier h-fit bg-white w-full rounded-2xl">
+                <div class="navigation flex flex-row py-3 divide-x-2 text-xl divide-black font-medium">
+                  <button value="greenEasy" class="levelNav w-full easy" name="easy" id="levelNav">Easy</button>
+                  <button value="orangeMedium" class="levelNav w-full medium" name="medium" id="levelNav">Medium</button>
+                  <button value="pinkHard" class="levelNav w-full hard" name="hard" id="questionNav">Hard</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer wrapper">
+        <div class="footer-content bg-white absolute bottom-0 right-0 left-0 pt-2 h-24 flex content-center font-medium">
+          <div class="content 2 navigationPlayground h-full w-full flex justify-center">
+            <a href="./questions.html" class="block px-4 py-2 mt-5 bg-black text-white rounded-full my-auto w-2/3 text-center">Questions Challenge</a>
+          </div>
+          <div class="content 3 navigationPlayground h-full w-full flex justify-center">
+            <a href="./playground.html" class="block px-4 py-2 mt-5 rounded-full my-auto w-2/3 text-center">Playground</a>
+          </div>
+          <div class="content 4 navigationLeaderboard h-full w-full flex justify-center">
+            <a href="./leaderboard.html" class="block px-4 py-2 mt-5 rounded-full my-auto w-2/3 text-center">Leaderboard</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Connect to external JS -->
+    <script src="js/questions.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>
