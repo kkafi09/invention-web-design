@@ -75,6 +75,9 @@ levelButton.forEach((element) => {
   colorMarker.forEach((child) => {
     child.classList.toggle(`bg-${replaceHash}`);
   });
+  for (let i = 0; i < getChildText.length; i++) {
+    getChildText[i].innerHTML = `${i + 1}. Create ${replaceHash} `;
+  }
   if (pathContain.includes("greenEasy")) {
     document.querySelector(".questionContainer").classList.remove("hidden");
     document.getElementsByName("easy")[0].classList.add(`text-${replaceHash}`, "font-bold");
@@ -92,37 +95,3 @@ levelButton.forEach((element) => {
     document.getElementsByName("hard")[0].classList.add(`text-${replaceHash}`, "font-bold");
   }
 });
-
-// let color = [];
-// let navigationChanging = [];
-// let clicked = false;
-// const arrtrue = [false, false, false];
-// console.log(clicked);
-// levelButton.forEach((element, index) => {
-//   clicked = true;
-//   color.push(element.value);
-//   element.addEventListener("click", () => {
-//     console.log(arrtrue);
-//     arrtrue[index] = true;
-//     console.log(arrtrue);
-//     const toTrue = element.setAttribute("name", "true");
-//     const getAttribute = element.getAttribute("name");
-//     if (getAttribute) {
-//       if (arrtrue[index]) {
-//         levelButton.forEach((value) => {
-//           if (!value.name) {
-//             value.classList.remove(`text-${value.value}`, "font-bold");
-//           } else {
-//             element.classList.add(`text-${element.value}`, "font-bold");
-//             colorMarker.forEach((child) => {
-//               child.classList.toggle(`bg-${element.value}`);
-//             });
-//           }
-//         });
-//       }
-//     }
-//   });
-// });
-handleQuestion = () => {
-  Swal.fire("The Internet?", "That thing is still around?", "question");
-};

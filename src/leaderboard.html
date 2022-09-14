@@ -13,6 +13,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- import AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- import tailwind css -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="../dist/output.css" rel="stylesheet" />
@@ -20,7 +23,7 @@
   </head>
   <body>
     <div class="wrapper">
-    <div class="responsive"></div>
+      <div class="responsive"></div>
       <div class="top-bar relative border-b lg:border-b-0 py-2">
         <div class="max-w-8xl absolute top-0 left-0 right-0 mx-auto w-auto">
           <div class="flex flex-col lg:flex-row box-border h-20 py-5">
@@ -50,28 +53,26 @@
       <div class="bg-cream -mt-4 pb-6 h-screen">
         <div class="max-w-8xl flex items-center h-full mx-auto w-11/12">
           <div class="w-full flex items-center justify-between">
-            <div class="questionList w-full flex flex-col gap-y-6" id="questionList">
+            <div class="questionList w-full flex flex-col gap-y-6" id="questionList" data-aos="fade-right">
               <div class="wrapper bg-white p-9 rounded-2xl">
-                <a href="./textEditor.html">
-                  <div class="questionContainer flex flex-col gap-y-6 overflow-y-scroll p-2 w-full max-h-96 h-96" id="questionContainer">
-                    <div class="question content flex flex-row gap-x-4 w-full h-16 rounded-xl bg-semigrey" id="questionContentWrapper">
-                      <div class="colorMarker flex justify-center items-center w-1/6 rounded-xl bg-greenEasy" id="colorMarker">
-                        <div class="text-center text-white text-2xl font-semibold h-6 w-6" id="ring">1</div>
-                      </div>
-                      <div class="questionlist py-3 flex items-center" id="questParent">
-                        <div class="question font-medium text-lg" id="questChild">Full Name #1</div>
-                      </div>
+                <div class="questionContainer flex flex-col gap-y-6 overflow-y-scroll p-2 w-full max-h-96 h-96" id="questionContainer">
+                  <div class="question content flex flex-row gap-x-4 w-full h-16 rounded-xl bg-semigrey" id="questionContentWrapper">
+                    <div class="colorMarker flex justify-center items-center w-1/6 rounded-xl bg-greenEasy" id="colorMarker">
+                      <div class="text-center text-white text-2xl font-semibold h-6 w-6" id="ring">1</div>
+                    </div>
+                    <div class="questionlist py-3 flex items-center" id="questParent">
+                      <div class="question font-medium text-lg" id="questChild">Full Name #1</div>
                     </div>
                   </div>
-                </a>
+                </div>
               </div>
               <div class="levelContaier h-fit w-full rounded-2xl">
-                <div class="flex flex-row py-3 divide-x-2 text-xl divide-black font-medium">
+                <div class="flex flex-row py-3 divide-x-2 text-xl divide-black font-medium" data-aos="fade-up">
                   <p><span class="text-pinkHard">*</span> points are earned based on questions</p>
                 </div>
               </div>
             </div>
-            <div class="text w-full px-5 text-center">
+            <div class="text w-full px-5 text-center" data-aos="fade-left">
               <h1 class="text-5xl font-semibold leading-normal">This is ice cream for you..</h1>
               <div class="imageWrapper flex justify-center w-full box-border p-3">
                 <img src="./img/iceCream.svg" alt="Gambar foto" class="" />
@@ -98,5 +99,8 @@
     <!-- Connect to external JS -->
     <script src="js/leaderboard.js"></script>
     <script src="js/login.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

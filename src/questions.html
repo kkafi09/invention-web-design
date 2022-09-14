@@ -13,6 +13,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- import aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- import tailwind css -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="../dist/output.css" rel="stylesheet" />
@@ -50,11 +53,11 @@
       <div class="bg-cream -mt-4 pb-6 h-screen">
         <div class="max-w-8xl flex items-center h-full mx-auto w-11/12">
           <div class="w-full flex items-center justify-between">
-            <div class="text w-full px-5">
+            <div class="text w-full px-5" data-aos="fade-right">
               <h1 class="text-5xl font-semibold leading-normal">Take it easy for the task.</h1>
               <img src="./img/questionGraphic.svg" alt="Gambar foto" />
             </div>
-            <div class="questionList w-full flex flex-col gap-y-6" id="questionList">
+            <div class="questionList w-full flex flex-col gap-y-6" id="questionList" data-aos="fade-left">
               <div class="wrapper bg-white p-9 rounded-2xl">
                 <a href="./textEditor.html">
                   <div class="questionContainer hidden flex flex-col gap-y-6 overflow-y-scroll p-2 w-full max-h-96 h-96" id="questionContainer">
@@ -63,7 +66,7 @@
                         <div class="ring-white ring-4 rounded-full h-6 w-6" id="ring"></div>
                       </div>
                       <div class="questionlist py-3 flex items-center" id="questParent">
-                        <div class="question font-medium text-lg" id="questChild">Question 1 #Easy</div>
+                        <div class="question font-medium text-lg childtext$" id="questChild">Question 1 #Easy</div>
                       </div>
                     </div>
                   </div>
@@ -98,5 +101,8 @@
     <!-- Connect to external JS -->
     <script src="js/questions.js"></script>
     <script src="js/login.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
