@@ -7,6 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/input.css" />
     <link rel="stylesheet" href="../dist/output.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
     <div class="responsive"></div>
@@ -62,7 +64,7 @@
             </div>
           </div>
           <div class="question-output-problem-textEditor h-fit flex flex-row mt-8 gap-x-8">
-            <div class="textEditorSection w-11/12 h-full">
+            <div class="textEditorSection w-full h-full" data-aos="fade-right">
               <div class="wrapperIDE font-medium">
                 <div class="topbar flex flex-row justify-between">
                   <button class="bg-white rounded-t-md px-4 py-2">Playground</button>
@@ -73,7 +75,7 @@
                 </div>
               </div>
             </div>
-            <div class="question_output flex flex-col w-2/3 h-full gap-y-8">
+            <div class="question_output flex flex-col w-2/3 h-full gap-y-8" data-aos="fade-left">
               <div class="wrapper-information">
                 <div class="topBar">
                   <div class="wrapperTopBar font-medium flex justify-between flex-row">
@@ -107,5 +109,9 @@
     </div>
     <script src="js/login.js"></script>
     <script src="js/questions.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
